@@ -1,0 +1,63 @@
+$color-primary-dark: #020511;
+$color-primary: #070C23;
+$color-grey-dark: rgb(72, 79, 107);
+$color-grey-darkest: rgb(48, 54, 76);
+
+$gradient-monotone: linear-gradient(rgba($color-grey-darkest, .2), rgba($color-primary-dark, .6) 60%, rgba($color-primary-dark, .8));
+
+:root {
+    --color-primary: #070C23;
+    // --color-primary: #0d1435;
+
+    --color-primary-dark: #020511;
+    --color-primary-light: #131a36;
+
+    --color-grey-light: rgb(162, 169, 199);
+    --color-grey-dark: rgb(72, 79, 107);
+
+    --color-white: #fff;
+
+    --gradient-main: linear-gradient(45deg, rgba(121,193,228,1) 0%, rgba(54,189,159,1) 31%, rgba(203,222,135,1) 62%, rgba(167,125,203,1) 100%, rgba(226,127,230,1) 100%);
+    --gradient-transparent: linear-gradient(45deg, rgba(121,193,228,.4) 0%, rgba(54,189,159,.4) 15%, rgba(203,222,135,.4) 30%, rgba(167,125,203,.4) 45%, rgba(0,0,0,0) 70%);
+    --gradient-transparent-reverse: linear-gradient(315deg, rgba(121,193,228,.4) 0%, rgba(54,189,159,.4) 15%, rgba(203,222,135,.4) 30%, rgba(167,125,203,.4) 45%, rgba(0,0,0,0) 70%);
+    --gradient-monotone: linear-gradient(rgba($color-primary, .5), rgba($color-primary-dark, .5));
+
+
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; // 1rem = 10px
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+.body {
+    background: var(--gradient-main);
+    color: var(--color-white);
+    font-size: 1.4rem;
+    font-family: 'Inter';
+    font-weight: 300;
+    line-height: 1.7;
+}
+
+.container {
+    margin: 1.5rem;
+    background-color: var(--color-primary);
+    border-radius: 3px;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: [full-start] 1fr [content-start] repeat(11, [col-start] minmax(60px, 1fr) [col-end]) [content-end] 1fr [full-end];
+    grid-template-rows: min-content 75vh min-content minmax(20vh, min-content) minmax(20vh, min-content);
+    gap: 3rem;
+}
+
+.container > * {
+    grid-column: content-start / content-end;
+}
