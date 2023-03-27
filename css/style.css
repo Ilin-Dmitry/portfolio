@@ -12,7 +12,8 @@
 
 html {
   box-sizing: border-box;
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  scroll-behavior: smooth !important; }
 
 *,
 *::before,
@@ -88,7 +89,8 @@ html {
     color: red; }
   .header__nav {
     list-style: none;
-    display: flex; }
+    display: flex;
+    scroll-behavior: smooth !important; }
     .header__nav > *:not(:last-child) {
       margin-right: 2rem; }
   .header__link:link, .header__link:visited {

@@ -6,6 +6,7 @@ $color-grey-darkest: rgb(48, 54, 76);
 $gradient-monotone: linear-gradient(rgba($color-grey-darkest, .2), rgba($color-primary-dark, .6) 60%, rgba($color-primary-dark, .8));
 
 :root {
+
     --color-primary: #070C23;
     // --color-primary: #0d1435;
 
@@ -28,6 +29,8 @@ $gradient-monotone: linear-gradient(rgba($color-grey-darkest, .2), rgba($color-p
 html {
     box-sizing: border-box;
     font-size: 62.5%; // 1rem = 10px
+    scroll-behavior: smooth!important;
+
 }
 
 *,
@@ -36,6 +39,7 @@ html {
     box-sizing: inherit;
     margin: 0;
     padding: 0;
+
 }
 
 .body {
