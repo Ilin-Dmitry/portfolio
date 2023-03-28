@@ -27,9 +27,7 @@
     &__nav {
         list-style: none;
         display: flex;
-    scroll-behavior: smooth!important;
 
-        
         & > *:not(:last-child) {
             margin-right: 2rem;
         }
@@ -40,6 +38,19 @@
         color: var(--color-grey-light);
         text-decoration: none;
         text-transform: uppercase;
+        transition: all .3s ease;
+        background-clip: text;
+        background-image: var(--gradient-main);
+        display: inline-block;
+    }
+
+    &__link:hover {
+        color: transparent;
+        transform: translateY(-2px) scale(1.05);
+    }
+
+    &__link:active {
+        transform: translateY(-1px) scale(1.05);
     }
 
 }
@@ -294,7 +305,22 @@
         font-size: 1.5rem;
         margin-top: auto;
         margin-left: auto;
+        display: inline-block;
+        background-clip: text;
+        background-image: var(--gradient-main);
+        transition: transform .3s ease, color .2s ease;
     }
+
+    &__repo-link:hover {
+        color: transparent;
+        transform: translateY(-2px) scale(1.05);
+        font-weight: 300;
+    }
+
+    &__repo-link:active {
+        transform: translateY(-1px) scale(1.05);
+    }
+
 }
 
 .project:nth-of-type(odd) {
@@ -361,8 +387,25 @@
         list-style: none;
     }
 
-    &__social-icon {
+    &__social-icon:link,
+    &__social-icon:visited {
+        display: inline-block;
         margin-left: 2rem;
+        color: var(--color-grey-light);
+        text-decoration: none;
+        background-image: var(--gradient-main);
+        background-clip: text;
+        transition: all .3s;
+    }
+
+    &__social-icon:hover {
+        color: transparent;
+        transform: translateY(-2px);
+        font-weight: 400;
+    }
+
+    &__social-icon:active {
+        transform: translateY(-1px);
     }
 }
 
@@ -372,37 +415,4 @@
     height: 3rem;
     mask-image: url(../img/logo.svg);
     mask-size: cover;
-}
-
-.code_splash {
-//   color: var(--color-grey-light);
-    color: white;
-    font-size: 3rem;
-    position: fixed;
-    top: 45px;
-    left: 378px;
-    // opacity: .3;
-    transition: opacity .7s;
-    max-width: 25rem;
-    line-height: 1.2;
-    word-break: break-all;
-
-    background-clip: text;
-    background-image: radial-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)90%);
-    color: transparent;
-    z-index: 1;
-
-    &::after {
-        position: absolute;
-        // content: "gfviuhjgkug hjgk gkjg ll uhighulhi iuhgk";
-        content: 'kuhjjg';
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        color: transparent;
-        background-clip: text;
-        // background-image: linear-gradient(to right, green, yellow, purple, blue);
-        // background-color: darkmagenta;
-    }
 }
