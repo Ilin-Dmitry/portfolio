@@ -26,10 +26,24 @@ $gradient-monotone: linear-gradient(rgba($color-grey-darkest, .2), rgba($color-p
 
 }
 
+$bp-largest: 68.75em; // 1100px / 16px
+$bp-large: 56.25em; // 900px / 16px
+$bp-medium: 50em; // 800px / 16px
+$bp-small: 43.75em; // 700px / 16px
+$bp-smallest: 36.25em; // 580px / 16px
+
 html {
     box-sizing: border-box;
     font-size: 62.5%; // 1rem = 10px
     scroll-behavior: smooth!important;
+
+    @media only screen and (max-width: $bp-medium) {
+        font-size: 56.25%; // 1rem = 9px
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+        font-size: 50%; // 1rem = 8px
+    }
 
 }
 
@@ -60,6 +74,24 @@ html {
     grid-template-columns: [full-start] 1fr [content-start] repeat(11, [col-start] minmax(60px, 1fr) [col-end]) [content-end] 1fr [full-end];
     grid-template-rows: min-content 75vh min-content minmax(20vh, min-content) minmax(20vh, min-content);
     gap: 3rem;
+
+    @media only screen and (max-width: $bp-largest) {
+        grid-template-columns: [full-start] 1fr [content-start] repeat(11, [col-start] minmax(40px, 1fr) [col-end]) [content-end] 1fr [full-end];
+        grid-template-rows: min-content 60vh min-content minmax(20vh, min-content) minmax(20vh, min-content);
+        margin: 0;
+    }
+
+    @media only screen and (max-width: $bp-large) {
+        padding: 2rem;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+        grid-template-columns: [full-start] 1fr [content-start] repeat(11, [col-start] minmax(20px, 1fr) [col-end]) [content-end] 1fr [full-end];
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+        grid-template-columns: [full-start] 1fr [content-start] repeat(11, [col-start] minmax(0, 1fr) [col-end]) [content-end] 1fr [full-end];
+    }
 }
 
 .container > * {
