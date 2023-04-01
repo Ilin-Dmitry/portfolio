@@ -26,6 +26,8 @@ $gradient-monotone: linear-gradient(rgba($color-grey-darkest, .2), rgba($color-p
 
 }
 
+$bp-largest-2: 120em; // 1600px / 16px
+$bp-largest-1: 100em; // 1600px / 16px
 $bp-largest: 68.75em; // 1100px / 16px
 $bp-large: 56.25em; // 900px / 16px
 $bp-medium: 50em; // 800px / 16px
@@ -36,6 +38,14 @@ html {
     box-sizing: border-box;
     font-size: 62.5%; // 1rem = 10px
     scroll-behavior: smooth!important;
+
+    @media only screen and (min-width: $bp-largest-1) {
+        font-size: 75%; // 1rem = 16px
+    }
+
+    @media only screen and (min-width: $bp-largest-2) {
+        font-size: 100%; // 1rem = 16px
+    }
 
     @media only screen and (max-width: $bp-medium) {
         font-size: 56.25%; // 1rem = 9px
