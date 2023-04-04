@@ -331,10 +331,12 @@ html {
     .project__img-container:hover .project__link {
       transform: scaleX(1);
       opacity: 1;
-      transition: opacity 1s 2s; }
+      transition: opacity 1s .6s; }
       @media only screen and (max-width: 36.25em) {
         .project__img-container:hover .project__link {
           transform: translate(-50%); } }
+    .project__img-container:hover ~ .project__description .project__site-link {
+      opacity: 0; }
   .project__img {
     position: relative;
     display: block;
@@ -413,25 +415,30 @@ html {
     align-self: top; }
     .project__description p {
       margin-bottom: 1rem; }
-  .project__repo-link:link, .project__repo-link:visited {
+  .project__description-links {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2rem; }
+  .project__description-link:link, .project__description-link:visited {
     color: var(--color-grey-light);
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 100;
     letter-spacing: 1px;
     font-size: 1.5rem;
-    margin-top: auto;
-    margin-left: auto;
     display: inline-block;
     background-clip: text;
     background-image: var(--gradient-main);
     transition: transform .3s ease, color .2s ease; }
-  .project__repo-link:hover {
+  .project__description-link:hover {
     color: transparent;
     transform: translateY(-2px) scale(1.05);
     font-weight: 300; }
-  .project__repo-link:active {
+  .project__description-link:active {
     transform: translateY(-1px) scale(1.05); }
+  .project__site-link:link, .project__site-link:visited {
+    transition: all .6s; }
 
 .project:nth-of-type(odd) {
   transform: translateX(-10vw); }
@@ -453,6 +460,7 @@ html {
       transform: translateX(0vw); } }
   .project:nth-of-type(even) .project__repo-link:link,
   .project:nth-of-type(even) .project__repo-link:visited {
+    order: -1;
     margin-left: 0;
     margin-right: auto; }
   .project:nth-of-type(even) .project__number {

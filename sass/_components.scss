@@ -315,11 +315,15 @@
             & .project__link {
                 transform: scaleX(1);
                 opacity: 1;
-                transition: opacity 1s 2s;
+                transition: opacity 1s .6s;
 
                 @media only screen and (max-width: $bp-smallest) {
                     transform: translate(-50%);
                 }
+            }
+
+            & ~ .project__description .project__site-link {
+                opacity: 0;
             }
         }
     }
@@ -420,30 +424,40 @@
         }
     }
 
-    &__repo-link:link,
-    &__repo-link:visited {
+    &__description-links {
+        margin-top: auto;
+        display: flex;
+        justify-content: space-between;
+        padding-top: 2rem;
+    }
+
+    &__description-link:link,
+    &__description-link:visited {
         color: var(--color-grey-light);
         text-decoration: none;
         text-transform: uppercase;
         font-weight: 100;
         letter-spacing: 1px;
         font-size: 1.5rem;
-        margin-top: auto;
-        margin-left: auto;
         display: inline-block;
         background-clip: text;
         background-image: var(--gradient-main);
         transition: transform .3s ease, color .2s ease;
     }
 
-    &__repo-link:hover {
+    &__description-link:hover {
         color: transparent;
         transform: translateY(-2px) scale(1.05);
         font-weight: 300;
     }
 
-    &__repo-link:active {
+    &__description-link:active {
         transform: translateY(-1px) scale(1.05);
+    }
+
+    &__site-link:link,
+    &__site-link:visited {
+        transition: all .6s;
     }
 
 }
@@ -473,6 +487,7 @@
 
     .project__repo-link:link,
     .project__repo-link:visited {
+        order: -1;
         margin-left: 0;
         margin-right: auto;
     }
