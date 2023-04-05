@@ -585,3 +585,24 @@
     mask-image: url(../img/logo.svg);
     mask-size: cover;
 }
+
+.button-up:link,
+.button-up:visited {
+    width: 5rem;
+    height: 5rem;
+    background: linear-gradient(var(--color-primary), var(--color-primary)) padding-box,
+                var(--gradient-main) border-box;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    font-weight: 100;
+    color: var(--color-white);
+    text-decoration: none;
+    opacity: .5;
+}
