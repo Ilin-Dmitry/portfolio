@@ -14,6 +14,12 @@ html {
   box-sizing: border-box;
   font-size: 62.5%;
   scroll-behavior: smooth !important; }
+  @media only screen and (min-width: 100em) {
+    html {
+      font-size: 75%; } }
+  @media only screen and (min-width: 120em) {
+    html {
+      font-size: 100%; } }
   @media only screen and (max-width: 50em) {
     html {
       font-size: 56.25%; } }
@@ -325,10 +331,12 @@ html {
     .project__img-container:hover .project__link {
       transform: scaleX(1);
       opacity: 1;
-      transition: opacity 1s 2s; }
+      transition: opacity 1s .6s; }
       @media only screen and (max-width: 36.25em) {
         .project__img-container:hover .project__link {
           transform: translate(-50%); } }
+    .project__img-container:hover ~ .project__description .project__site-link {
+      opacity: 0; }
   .project__img {
     position: relative;
     display: block;
@@ -373,7 +381,9 @@ html {
         position: static;
         width: 0;
         height: 0;
-        background-image: none; } }
+        background-image: none;
+        padding: 0;
+        margin: 2rem; } }
   .project__link {
     transform: rotateY(180deg);
     display: block;
@@ -407,25 +417,33 @@ html {
     align-self: top; }
     .project__description p {
       margin-bottom: 1rem; }
-  .project__repo-link:link, .project__repo-link:visited {
+  .project__description-links {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2rem; }
+  .project__description-link:link, .project__description-link:visited {
     color: var(--color-grey-light);
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 100;
     letter-spacing: 1px;
-    font-size: 1.5rem;
-    margin-top: auto;
-    margin-left: auto;
+    font-size: 1.3rem;
     display: inline-block;
     background-clip: text;
     background-image: var(--gradient-main);
     transition: transform .3s ease, color .2s ease; }
-  .project__repo-link:hover {
+  .project__description-link:hover {
     color: transparent;
     transform: translateY(-2px) scale(1.05);
     font-weight: 300; }
-  .project__repo-link:active {
+  .project__description-link:active {
     transform: translateY(-1px) scale(1.05); }
+  .project__site-link:link, .project__site-link:visited {
+    transition: all .6s; }
+    @media only screen and (max-width: 36.25em) {
+      .project__site-link:link, .project__site-link:visited {
+        display: none; } }
 
 .project:nth-of-type(odd) {
   transform: translateX(-10vw); }
@@ -447,6 +465,7 @@ html {
       transform: translateX(0vw); } }
   .project:nth-of-type(even) .project__repo-link:link,
   .project:nth-of-type(even) .project__repo-link:visited {
+    order: -1;
     margin-left: 0;
     margin-right: auto; }
   .project:nth-of-type(even) .project__number {
@@ -479,6 +498,60 @@ html {
   .cta__text {
     font-size: 1.8rem;
     line-height: 1.8; }
+  .cta__contacts {
+    display: flex;
+    justify-content: end;
+    margin-top: 3rem;
+    gap: 2rem; }
+    @media only screen and (max-width: 43.75em) {
+      .cta__contacts {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 3rem; } }
+    @media only screen and (max-width: 36.25em) {
+      .cta__contacts {
+        display: block; } }
+  .cta__contact {
+    display: flex;
+    align-items: baseline;
+    font-size: 1.6rem;
+    color: var(--color-grey-light);
+    text-decoration: none;
+    transition: all 1.5s ease;
+    width: 3.6rem;
+    max-width: max-content;
+    height: 5.5rem;
+    overflow: hidden; }
+    @media only screen and (max-width: 43.75em) {
+      .cta__contact {
+        width: 100%; } }
+    .cta__contact:hover, .cta__contact:active {
+      width: 100%;
+      max-width: max-content; }
+    .cta__contact:hover .cta__contact-text,
+    .cta__contact:active .cta__contact-text {
+      opacity: 1; }
+    .cta__contact:active .cta__contact-text {
+      transform: translateY(-2px);
+      color: transparent; }
+    .cta__contact-text {
+      margin-left: 2rem;
+      line-height: 1;
+      font-weight: 300;
+      background: var(--gradient-main);
+      background-clip: text;
+      opacity: 1;
+      transition: all .2s; }
+      .cta__contact-text:hover {
+        color: transparent; }
+    .cta__contact-img {
+      width: 3.6rem;
+      height: 3.6rem;
+      position: relative;
+      top: 1rem;
+      display: block; }
 
 .footer {
   align-self: end;
@@ -515,3 +588,22 @@ html {
   height: 3rem;
   mask-image: url(../img/logo.svg);
   mask-size: cover; }
+
+.button-up:link,
+.button-up:visited {
+  width: 5rem;
+  height: 5rem;
+  background: linear-gradient(var(--color-primary), var(--color-primary)) padding-box, var(--gradient-main) border-box;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  position: fixed;
+  bottom: 12%;
+  right: 7%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  font-weight: 100;
+  color: var(--color-white);
+  text-decoration: none;
+  opacity: .5; }
