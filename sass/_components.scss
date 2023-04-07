@@ -588,6 +588,11 @@
             opacity: 1;
         }
 
+        &:active .cta__contact-text {
+            transform: translateY(-2px);
+            color: transparent;
+        }
+
         &-text {
             margin-left: 2rem;
             line-height: 1;
@@ -670,8 +675,8 @@
     border: 1px solid transparent;
     border-radius: 3px;
     position: fixed;
-    bottom: 10%;
-    right: 5%;
+    bottom: 12%;
+    right: 7%;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -533,6 +533,9 @@ html {
     .cta__contact:hover .cta__contact-text,
     .cta__contact:active .cta__contact-text {
       opacity: 1; }
+    .cta__contact:active .cta__contact-text {
+      transform: translateY(-2px);
+      color: transparent; }
     .cta__contact-text {
       margin-left: 2rem;
       line-height: 1;
@@ -594,8 +597,8 @@ html {
   border: 1px solid transparent;
   border-radius: 3px;
   position: fixed;
-  bottom: 10%;
-  right: 5%;
+  bottom: 12%;
+  right: 7%;
   display: flex;
   justify-content: center;
   align-items: center;
