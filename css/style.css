@@ -441,6 +441,9 @@ html {
     transform: translateY(-1px) scale(1.05); }
   .project__site-link:link, .project__site-link:visited {
     transition: all .6s; }
+    @media only screen and (max-width: 36.25em) {
+      .project__site-link:link, .project__site-link:visited {
+        display: none; } }
 
 .project:nth-of-type(odd) {
   transform: translateX(-10vw); }

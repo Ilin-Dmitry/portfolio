@@ -459,6 +459,10 @@
     &__site-link:link,
     &__site-link:visited {
         transition: all .6s;
+
+        @media only screen and (max-width: $bp-smallest) {
+            display: none;
+        }
     }
 
 }
