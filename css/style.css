@@ -381,7 +381,9 @@ html {
         position: static;
         width: 0;
         height: 0;
-        background-image: none; } }
+        background-image: none;
+        padding: 0;
+        margin: 2rem; } }
   .project__link {
     transform: rotateY(180deg);
     display: block;
@@ -493,6 +495,57 @@ html {
   .cta__text {
     font-size: 1.8rem;
     line-height: 1.8; }
+  .cta__contacts {
+    display: flex;
+    justify-content: end;
+    margin-top: 3rem;
+    gap: 2rem; }
+    @media only screen and (max-width: 43.75em) {
+      .cta__contacts {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 3rem; } }
+    @media only screen and (max-width: 36.25em) {
+      .cta__contacts {
+        display: block; } }
+  .cta__contact {
+    display: flex;
+    align-items: baseline;
+    font-size: 1.6rem;
+    color: var(--color-grey-light);
+    text-decoration: none;
+    transition: all 1.5s ease;
+    width: 3.6rem;
+    max-width: max-content;
+    height: 5.5rem;
+    overflow: hidden; }
+    @media only screen and (max-width: 43.75em) {
+      .cta__contact {
+        width: 100%; } }
+    .cta__contact:hover, .cta__contact:active {
+      width: 100%;
+      max-width: max-content; }
+    .cta__contact:hover .cta__contact-text,
+    .cta__contact:active .cta__contact-text {
+      opacity: 1; }
+    .cta__contact-text {
+      margin-left: 2rem;
+      line-height: 1;
+      font-weight: 300;
+      background: var(--gradient-main);
+      background-clip: text;
+      opacity: 1;
+      transition: all .2s; }
+      .cta__contact-text:hover {
+        color: transparent; }
+    .cta__contact-img {
+      width: 3.6rem;
+      height: 3.6rem;
+      position: relative;
+      top: 1rem;
+      display: block; }
 
 .footer {
   align-self: end;
@@ -538,7 +591,7 @@ html {
   border: 1px solid transparent;
   border-radius: 3px;
   position: fixed;
-  bottom: 5%;
+  bottom: 10%;
   right: 5%;
   display: flex;
   justify-content: center;
