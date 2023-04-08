@@ -89,6 +89,7 @@ html {
         grid-template-columns: [full-start] 1fr [content-start] repeat(11, [col-start] minmax(40px, 1fr) [col-end]) [content-end] 1fr [full-end];
         grid-template-rows: min-content 60vh min-content minmax(20vh, min-content) minmax(20vh, min-content);
         margin: 0;
+        gap: 0;
     }
 
     @media only screen and (max-width: $bp-large) {
