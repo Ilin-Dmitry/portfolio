@@ -281,6 +281,9 @@ html {
     color: transparent;
     -webkit-text-stroke: 1px var(--color-grey-dark);
     z-index: 10; }
+    @media only screen and (max-width: 56.25em) {
+      .project__number {
+        transform: translateX(14vw); } }
     @media only screen and (max-width: 50em) {
       .project__number {
         transform: translateX(0vw); } }
@@ -472,6 +475,10 @@ html {
     top: -13rem;
     left: -5rem;
     transform: translateX(-30vw); }
+    @media only screen and (max-width: 56.25em) {
+      .project:nth-of-type(even) .project__number {
+        left: -3rem;
+        transform: translateX(-14vw); } }
     @media only screen and (max-width: 50em) {
       .project:nth-of-type(even) .project__number {
         left: -3rem;
