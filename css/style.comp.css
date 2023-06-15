@@ -139,8 +139,7 @@ html {
   text-align: center;
   align-self: center;
   position: relative;
-  z-index: 10;
-  overflow: hidden; }
+  z-index: 10; }
   @media only screen and (max-width: 43.75em) {
     .heading {
       grid-column: col-start 2 / col-end 10; } }
@@ -379,6 +378,8 @@ html {
       background-image: linear-gradient(rgba(48, 54, 76, 0.2), rgba(2, 5, 17, 0.6) 60%, rgba(2, 5, 17, 0.8)), url("../img/projects/rustravel_full.jpg"); }
     .project__img-back_5 {
       background-image: linear-gradient(rgba(48, 54, 76, 0.2), rgba(2, 5, 17, 0.6) 60%, rgba(2, 5, 17, 0.8)), url("../img/projects/learn_full.jpg"); }
+    .project__img-back_6 {
+      background-image: linear-gradient(rgba(48, 54, 76, 0.2), rgba(2, 5, 17, 0.6) 60%, rgba(2, 5, 17, 0.8)), url("../img/projects/mesto_full.jpg"); }
     @media only screen and (max-width: 36.25em) {
       .project__img-back {
         position: static;
