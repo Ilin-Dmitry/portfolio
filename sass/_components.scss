@@ -62,7 +62,6 @@
     align-self: center;
     position: relative;
     z-index: 10;
-    overflow: hidden;
 
     @media only screen and (max-width: $bp-small) {
         grid-column: col-start 2 / col-end 10;
@@ -178,7 +177,7 @@
 
     &__item {
         display: inline;
-        padding: 1rem 2.5rem;  
+        padding: 1rem 2.5rem;
         background-color: var(--color-grey-dark);
         border-radius: 3px;
         margin-right: 1.5rem;
@@ -258,7 +257,7 @@
             top: -9rem;
             right: -2rem;
         }
-    
+
 
         &::after {
             content: attr(data-value);;
@@ -276,7 +275,7 @@
             }
         }
     }
-    
+
     &__img-container {
         position: relative;
         grid-column: 1 / 2;
@@ -329,7 +328,7 @@
         }
     }
 
-    
+
 
     &__img {
         position: relative;
@@ -371,7 +370,8 @@
         &_2 {background-image: $gradient-monotone, url('../img/projects/trillo_full.jpg');}
         &_3 {background-image: $gradient-monotone, url('../img/projects/nexter_full.jpg');}
         &_4 {background-image: $gradient-monotone, url('../img/projects/rustravel_full.jpg');}
-        &_5 {background-image: $gradient-monotone, url('../img/projects/learn_full.jpg');}    
+        &_5 {background-image: $gradient-monotone, url('../img/projects/learn_full.jpg');}
+        &_6 {background-image: $gradient-monotone, url('../img/projects/mesto_full.jpg');}
 
         @media only screen and (max-width: $bp-smallest) {
             position: static;
@@ -582,7 +582,7 @@
             width: 100%;
         }
 
-        
+
         &:hover,
         &:active {
             width: 100%;
@@ -632,7 +632,7 @@
     padding-bottom: 3rem;
     padding-top: 3rem;
     font-size: 1.2rem;
-    
+
     &__copyright {
         display: block;
     }
